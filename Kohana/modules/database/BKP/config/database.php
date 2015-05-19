@@ -4,7 +4,7 @@ return array
 (
 	'default' => array
 	(
-		'type'       => 'MySQLi',
+		'type'       => 'MySQL',
 		'connection' => array(
 			/**
 			 * The following options are available for MySQL:
@@ -19,8 +19,8 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => 'localhost',
-			'database'   => 'jp7',
-			'username'   => 'root',
+			'database'   => 'kohana',
+			'username'   => FALSE,
 			'password'   => FALSE,
 			'persistent' => FALSE,
 		),
@@ -28,7 +28,7 @@ return array
 		'charset'      => 'utf8',
 		'caching'      => FALSE,
 	),
-	'default_OLD' => array(
+	'alternate' => array(
 		'type'       => 'PDO',
 		'connection' => array(
 			/**
@@ -39,9 +39,9 @@ return array
 			 * string   password    database password
 			 * boolean  persistent  use persistent connections?
 			 */
-			'dsn'        => 'mysql:host=127.0.0.1;dbname=jp7',
-			'username'   => FALSE,
-			'password'   => FALSE,
+			'dsn'        => 'mysql:host=localhost;dbname=kohana',
+			'username'   => 'root',
+			'password'   => 'r00tdb',
 			'persistent' => FALSE,
 		),
 		/**
