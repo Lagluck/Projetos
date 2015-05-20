@@ -209,3 +209,397 @@
 #10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
 #11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
 #12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php:431
+2015-05-19 01:09:11 --- CRITICAL: ErrorException [ 1 ]: Class 'Database_MySQLi' not found ~ MODPATH\database\classes\Kohana\Database.php [ 78 ] in file:line
+2015-05-19 01:09:11 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 01:16:11 --- CRITICAL: Database_Exception [ 8192 ]: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 67 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php:431
+2015-05-19 01:16:11 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php(431): Kohana_Database_MySQL->connect()
+#1 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database.php(478): Kohana_Database_MySQL->escape('R$10 off R$20 o...')
+#2 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query\Builder\Insert.php(149): Kohana_Database->quote('R$10 off R$20 o...')
+#3 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Insert->compile(Object(Database_MySQL))
+#4 C:\wamp\www\Kohana\application\classes\Model\desafio.php(39): Kohana_Database_Query->execute(Object(Database_MySQL))
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(36): Model_Desafio->insert_item('R$10 off R$20 o...')
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php:431
+2015-05-19 01:28:40 --- CRITICAL: Database_Exception [ 1045 ]: SQLSTATE[HY000] [1045] Accès refusé pour l'utilisateur: 'kohana'@'@localhost' (mot de passe: OUI) ~ MODPATH\database\classes\Kohana\Database\PDO.php [ 59 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:28:40 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php(248): Kohana_Database_PDO->connect()
+#1 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database.php(478): Kohana_Database_PDO->escape('R$10 off R$20 o...')
+#2 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query\Builder\Insert.php(149): Kohana_Database->quote('R$10 off R$20 o...')
+#3 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Insert->compile(Object(Database_PDO))
+#4 C:\wamp\www\Kohana\application\classes\Model\desafio.php(39): Kohana_Database_Query->execute(Object(Database_PDO))
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(36): Model_Desafio->insert_item('R$10 off R$20 o...')
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:29:43 --- CRITICAL: Database_Exception [ 1044 ]: SQLSTATE[HY000] [1044] Accès refusé pour l'utilisateur: ''@'@localhost'. Base 'jp7' ~ MODPATH\database\classes\Kohana\Database\PDO.php [ 59 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:29:43 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php(248): Kohana_Database_PDO->connect()
+#1 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database.php(478): Kohana_Database_PDO->escape('R$10 off R$20 o...')
+#2 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query\Builder\Insert.php(149): Kohana_Database->quote('R$10 off R$20 o...')
+#3 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Insert->compile(Object(Database_PDO))
+#4 C:\wamp\www\Kohana\application\classes\Model\desafio.php(39): Kohana_Database_Query->execute(Object(Database_PDO))
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(36): Model_Desafio->insert_item('R$10 off R$20 o...')
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:30:21 --- CRITICAL: Database_Exception [ 1044 ]: SQLSTATE[HY000] [1044] Accès refusé pour l'utilisateur: ''@'@localhost'. Base 'jp7' ~ MODPATH\database\classes\Kohana\Database\PDO.php [ 59 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:30:21 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php(248): Kohana_Database_PDO->connect()
+#1 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database.php(478): Kohana_Database_PDO->escape('R$10 off R$20 o...')
+#2 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query\Builder\Insert.php(149): Kohana_Database->quote('R$10 off R$20 o...')
+#3 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Insert->compile(Object(Database_PDO))
+#4 C:\wamp\www\Kohana\application\classes\Model\desafio.php(39): Kohana_Database_Query->execute(Object(Database_PDO))
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(36): Model_Desafio->insert_item('R$10 off R$20 o...')
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\PDO.php:248
+2015-05-19 01:36:31 --- CRITICAL: Database_Exception [ 8192 ]: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 67 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php:431
+2015-05-19 01:36:31 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php(431): Kohana_Database_MySQL->connect()
+#1 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database.php(478): Kohana_Database_MySQL->escape('R$10 off R$20 o...')
+#2 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query\Builder\Insert.php(149): Kohana_Database->quote('R$10 off R$20 o...')
+#3 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(234): Kohana_Database_Query_Builder_Insert->compile(Object(Database_MySQL))
+#4 C:\wamp\www\Kohana\application\classes\Model\desafio.php(39): Kohana_Database_Query->execute(Object(Database_MySQL))
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(36): Model_Desafio->insert_item('R$10 off R$20 o...')
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\MySQL.php:431
+2015-05-19 01:50:36 --- CRITICAL: ErrorException [ 1 ]: Class 'Database_MySQLi' not found ~ MODPATH\database\classes\Kohana\Database.php [ 78 ] in file:line
+2015-05-19 01:50:36 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 02:04:51 --- CRITICAL: ErrorException [ 8 ]: Array to string conversion ~ APPPATH\classes\Controller\home.php [ 37 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:37
+2015-05-19 02:04:51 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(37): Kohana_Core::error_handler(8, 'Array to string...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:37
+2015-05-19 02:43:22 --- CRITICAL: Database_Exception [ 1241 ]: Operand should contain 1 column(s) [ INSERT INTO `merchant` (`merchant_name`, `adress_ID`) VALUES ('Bob\'s Pizza', (1, 1)) ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 02:43:22 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(2, 'INSERT INTO `me...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(73): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(43): Model_Desafio->insert_merchant('Bob's Pizza', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:01:57 --- CRITICAL: Database_Exception [ 1136 ]: Column count doesn't match value count at row 1 [ INSERT INTO `adresses` (`purchase_count`, `item_ID`, `merchant_ID`, `purchaser_ID`) VALUES ('2') ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:01:57 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(2, 'INSERT INTO `ad...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(105): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(44): Model_Desafio->insert_purchase('2', 7, 1, 0)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:06:05 --- CRITICAL: Database_Exception [ 1054 ]: Champ 'purchase_count' inconnu dans field list [ INSERT INTO `adresses` (`purchase_count`, `item_ID`, `merchant_ID`, `purchaser_ID`) VALUES ('2', 8, 2, 0) ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:06:05 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(2, 'INSERT INTO `ad...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(105): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(44): Model_Desafio->insert_purchase('2', 8, 2, 0)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:12:00 --- CRITICAL: Database_Exception [ 1062 ]: Duplicata du champ '0' pour la clef 'PRIMARY' [ INSERT INTO `purchaser` (`purchaser_name`) VALUES ('Amy Pond') ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 03:12:00 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(2, 'INSERT INTO `pu...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(56): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(40): Model_Desafio->insert_purchaser('Amy Pond')
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 16:17:17 --- CRITICAL: ErrorException [ 8 ]: Use of undefined constant purchase_count - assumed 'purchase_count' ~ APPPATH\classes\Model\desafio.php [ 113 ] in C:\wamp\www\Kohana\application\classes\Model\desafio.php:113
+2015-05-19 16:17:17 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Model\desafio.php(113): Kohana_Core::error_handler(8, 'Use of undefine...', 'C:\\wamp\\www\\Koh...', 113, Array)
+#1 C:\wamp\www\Kohana\application\classes\Controller\home.php(35): Model_Desafio->select_todos()
+#2 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\wamp\www\Kohana\application\classes\Model\desafio.php:113
+2015-05-19 16:26:00 --- CRITICAL: ErrorException [ 1 ]: Call to undefined method Database_Query::from() ~ APPPATH\classes\Model\desafio.php [ 114 ] in file:line
+2015-05-19 16:26:00 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 16:37:15 --- CRITICAL: ErrorException [ 8 ]: Undefined index: arquivo ~ APPPATH\classes\Controller\home.php [ 16 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:16
+2015-05-19 16:37:15 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(16): Kohana_Core::error_handler(8, 'Undefined index...', 'C:\\wamp\\www\\Koh...', 16, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:16
+2015-05-19 16:37:44 --- CRITICAL: ErrorException [ 8 ]: Undefined index: arquivo ~ APPPATH\classes\Controller\home.php [ 16 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:16
+2015-05-19 16:37:44 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(16): Kohana_Core::error_handler(8, 'Undefined index...', 'C:\\wamp\\www\\Koh...', 16, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:16
+2015-05-19 17:03:05 --- CRITICAL: ErrorException [ 4096 ]: Object of class Database_MySQLi_Result could not be converted to string ~ APPPATH\classes\Controller\home.php [ 37 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:37
+2015-05-19 17:03:05 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(37): Kohana_Core::error_handler(4096, 'Object of class...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:37
+2015-05-19 17:05:52 --- CRITICAL: ErrorException [ 8 ]: Array to string conversion ~ APPPATH\classes\Controller\home.php [ 39 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:39
+2015-05-19 17:05:52 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(39): Kohana_Core::error_handler(8, 'Array to string...', 'C:\\wamp\\www\\Koh...', 39, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:39
+2015-05-19 17:38:54 --- CRITICAL: Database_Exception [ 1054 ]: Champ 'adress.adress_ID' inconnu dans field list [ SELECT `merchant`.`merchant_name`, `merchant`.`merchant_ID`, `purchase_count`, `purchase_ID`, `adress`.`adress_ID`, `adress`.`drescription` FROM `merchant` JOIN `purchase` ON (`merchant`.`merchant_ID` = `purchase`.`merchant_ID`) JOIN `adresses` ON (`merchant`.`adress_ID` = `adresses`.`adress_ID`) ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 17:38:54 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(1, 'SELECT `merchan...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(119): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(35): Model_Desafio->select_todos()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 17:39:51 --- CRITICAL: Database_Exception [ 1054 ]: Champ 'adress.adress_ID' inconnu dans field list [ SELECT `merchant`.`merchant_name`, `merchant`.`merchant_ID`, `purchase_count`, `purchase_ID`, `adress`.`adress_ID`, `adress`.`description` FROM `merchant` JOIN `purchase` ON (`merchant`.`merchant_ID` = `purchase`.`merchant_ID`) JOIN `adresses` ON (`merchant`.`adress_ID` = `adresses`.`adress_ID`) ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 17:39:51 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(1, 'SELECT `merchan...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(119): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(35): Model_Desafio->select_todos()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 21:40:39 --- CRITICAL: ErrorException [ 2 ]: file(): Filename cannot be empty ~ APPPATH\classes\Controller\home.php [ 19 ] in file:line
+2015-05-19 21:40:39 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'file(): Filenam...', 'C:\\wamp\\www\\Koh...', 19, Array)
+#1 C:\wamp\www\Kohana\application\classes\Controller\home.php(19): file('', 2)
+#2 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#8 {main} in file:line
+2015-05-19 21:46:40 --- CRITICAL: ErrorException [ 8 ]: Array to string conversion ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:46:40 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Array to string...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(48): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:04 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 0 ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:04 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(48): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:15 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 1 ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:15 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(48): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:59 --- CRITICAL: ErrorException [ 8 ]: Array to string conversion ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:47:59 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Array to string...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(48): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:48:12 --- CRITICAL: ErrorException [ 8 ]: Undefined offset: 1 ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:48:12 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Undefined offse...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(48): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:51:25 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: lista ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:51:25 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(54): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 21:53:38 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected ']', expecting ',' or ';' ~ APPPATH\views\desafio.php [ 37 ] in file:line
+2015-05-19 21:53:38 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 21:56:36 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' ~ APPPATH\views\desafio.php [ 41 ] in file:line
+2015-05-19 21:56:36 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 22:00:25 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: lista ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 22:00:25 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(10): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_index()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 22:02:51 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '_' (T_STRING) ~ APPPATH\classes\Controller\home.php [ 10 ] in file:line
+2015-05-19 22:02:51 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 22:03:11 --- CRITICAL: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH\views\desafio.php [ 37 ] in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 22:03:11 --- DEBUG: #0 C:\wamp\www\Kohana\application\views\desafio.php(37): Kohana_Core::error_handler(2, 'Invalid argumen...', 'C:\\wamp\\www\\Koh...', 37, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\View.php(62): include('C:\\wamp\\www\\Koh...')
+#2 C:\wamp\www\Kohana\system\classes\Kohana\View.php(359): Kohana_View::capture('C:\\wamp\\www\\Koh...', Array)
+#3 C:\wamp\www\Kohana\system\classes\Kohana\View.php(236): Kohana_View->render()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 C:\wamp\www\Kohana\application\classes\Controller\home.php(11): Kohana_Response->body(Object(View))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_index()
+#7 [internal function]: Kohana_Controller->execute()
+#8 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#9 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#11 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#12 {main} in C:\wamp\www\Kohana\application\views\desafio.php:37
+2015-05-19 22:05:18 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected 'else' (T_ELSE) ~ APPPATH\views\desafio.php [ 44 ] in file:line
+2015-05-19 22:05:18 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2015-05-19 22:10:19 --- CRITICAL: Database_Exception [ 1054 ]: Champ 'item_description' inconnu dans field list [ SELECT `merchant`.`merchant_name`, `merchant`.`merchant_ID`, `purchase_count`, `purchase_ID`, `adresses`.`adress_ID`, `adresses`.`description`, `purchaser_name`, `purchaser`.`purchaser_ID`, `item_description`, `item_price` FROM `merchant` JOIN `purchase` ON (`merchant`.`merchant_ID` = `purchase`.`merchant_ID`) JOIN `adresses` ON (`merchant`.`adress_ID` = `adresses`.`adress_ID`) JOIN `purchaser` ON (`purchaser`.`purchaser_ID` = `purchase`.`purchase_ID`) ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 22:10:19 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(1, 'SELECT `merchan...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(121): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(37): Model_Desafio->select_todos()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 22:23:39 --- CRITICAL: ErrorException [ 2 ]: file(): Filename cannot be empty ~ APPPATH\classes\Controller\home.php [ 21 ] in file:line
+2015-05-19 22:23:39 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'file(): Filenam...', 'C:\\wamp\\www\\Koh...', 21, Array)
+#1 C:\wamp\www\Kohana\application\classes\Controller\home.php(21): file('', 2)
+#2 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#8 {main} in file:line
+2015-05-19 22:23:45 --- CRITICAL: Database_Exception [ 1062 ]: Duplicata du champ '10' pour la clef 'item_price' [ INSERT INTO `item` (`item_description`, `item_price`) VALUES ('R$30 of awesome for R$10', '10.0') ] ~ MODPATH\database\classes\Kohana\Database\MySQLi.php [ 171 ] in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 22:23:45 --- DEBUG: #0 C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQLi->query(2, 'INSERT INTO `it...', false, Array)
+#1 C:\wamp\www\Kohana\application\classes\Model\desafio.php(40): Kohana_Database_Query->execute(Object(Database_MySQLi))
+#2 C:\wamp\www\Kohana\application\classes\Controller\home.php(42): Model_Desafio->insert_item('R$30 of awesome...', '10.0')
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\Kohana\modules\database\classes\Kohana\Database\Query.php:251
+2015-05-19 23:03:04 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: campos ~ APPPATH\classes\Controller\home.php [ 40 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:40
+2015-05-19 23:03:04 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(40): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\wamp\\www\\Koh...', 40, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:40
+2015-05-19 23:03:35 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: campos ~ APPPATH\classes\Controller\home.php [ 40 ] in C:\wamp\www\Kohana\application\classes\Controller\home.php:40
+2015-05-19 23:03:35 --- DEBUG: #0 C:\wamp\www\Kohana\application\classes\Controller\home.php(40): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\wamp\\www\\Koh...', 40, Array)
+#1 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\Kohana\application\classes\Controller\home.php:40
+2015-05-19 23:04:39 --- CRITICAL: ErrorException [ 2 ]: file(): Filename cannot be empty ~ APPPATH\classes\Controller\home.php [ 21 ] in file:line
+2015-05-19 23:04:39 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'file(): Filenam...', 'C:\\wamp\\www\\Koh...', 21, Array)
+#1 C:\wamp\www\Kohana\application\classes\Controller\home.php(21): file('', 2)
+#2 C:\wamp\www\Kohana\system\classes\Kohana\Controller.php(84): Controller_Home->action_desafio()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Home))
+#5 C:\wamp\www\Kohana\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\Kohana\system\classes\Kohana\Request.php(997): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\Kohana\index.php(118): Kohana_Request->execute()
+#8 {main} in file:line

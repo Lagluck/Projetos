@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.');
+<?php
 
 /**
  * Backwards compatibility extension for the database writer.
@@ -9,7 +9,7 @@
  * @copyright  (c) 2012 Kohana Team
  * @license    http://kohanaframework.org/license
  */
-class Kohana_Config_Database extends Config_Database_Writer
+class Kohana_Config_Database extends Kohana_Config_Database_Writer
 {
 
 }

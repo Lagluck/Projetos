@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.');
+<?php
 /**
  * Database query builder for INSERT statements. See [Query Builder](/database/query/builder) for usage and examples.
  *
@@ -31,7 +31,7 @@ class Kohana_Database_Query_Builder_Insert extends Database_Query_Builder {
 		if ($table)
 		{
 			// Set the inital table name
-			$this->table($table);
+			$this->_table = $table;
 		}
 
 		if ($columns)
@@ -47,14 +47,11 @@ class Kohana_Database_Query_Builder_Insert extends Database_Query_Builder {
 	/**
 	 * Sets the table to insert into.
 	 *
-	 * @param   string  $table  table name
+	 * @param   mixed  $table  table name or array($table, $alias) or object
 	 * @return  $this
 	 */
 	public function table($table)
 	{
-		if ( ! is_string($table))
-			throw new Kohana_Exception('INSERT INTO syntax does not allow table aliasing');
-
 		$this->_table = $table;
 
 		return $this;

@@ -106,4 +106,22 @@ class Model_Desafio extends Model
     
         return $returned_id;
     }
+    
+    public function select_todos(){
+        
+        
+        $lista = DB::select('merchant.merchant_name','merchant.merchant_ID','purchase_count','purchase_ID','adresses.adress_ID','adresses.description','purchaser_name','purchaser.purchaser_ID','item_description','item_price')
+                ->from('merchant')
+                ->join('purchase')
+                ->on('merchant.merchant_ID','=','purchase.merchant_ID')
+                ->join('adresses')
+                ->on('merchant.adress_ID','=','adresses.adress_ID')
+                ->join('purchaser')
+                ->on('purchaser.purchaser_ID','=','purchase.purchase_ID')
+                ->join('item')
+                ->on('purchase.item_ID','=','item.item_ID')
+                ->execute($this->_db);
+
+        return $lista;
+    }
 }

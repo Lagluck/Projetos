@@ -10,5 +10,6 @@ return array(
 		'fr-fr' => 'Français',
 		'he-il' => 'עברית',
 		'nl'	=> 'Nederlands',
+                'pt-br' => 'Portuguese'
 	),
 );

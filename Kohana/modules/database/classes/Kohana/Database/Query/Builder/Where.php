@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.');
+<?php
 /**
  * Database query builder for WHERE statements. See [Query Builder](/database/query/builder) for usage and examples.
  *
@@ -172,7 +172,7 @@ abstract class Kohana_Database_Query_Builder_Where extends Database_Query_Builde
 	 */
 	public function limit($number)
 	{
-		$this->_limit = ($number === NULL) ? NULL : (int) $number;
+		$this->_limit = $number;
 
 		return $this;
 	}

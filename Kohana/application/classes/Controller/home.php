@@ -6,8 +6,10 @@ public function action_index()
 	{
             //Direcionamento para a view desafio.php
             $view =View::factory('desafio')
-                ->bind('subir', $subir); //passada a variálvel subir zerada, no caso de ser a primeira abertura.
+                ->bind('subir', $subir) //passada a variálvel subir zerada, no caso de ser a primeira abertura.
+                ->bind('lista',$lista);
             $this->response->body($view);
+            
 	}
         public function action_desafio (){
 
@@ -29,12 +31,11 @@ public function action_index()
                 }
             }
             
-            /*echo '<pre>';
-            var_dump($campos);
-            echo '</pre>';
-            exit;*/
             
             $model_desafio = new Model_Desafio('default');
+            
+            $lista = $model_desafio->select_todos();
+              
             
             foreach ($campos as $campo){
             $id_purchaser = $model_desafio->insert_purchaser($campo[0]);
@@ -46,7 +47,8 @@ public function action_index()
             //refaz a view com as variaveis
             $view =View::factory('desafio')
                     ->bind('subir',$subir)
-                    ->bind('campos', $campos);
+                    ->bind('campos', $campos)
+                    ->bind('lista', $lista);
             $this->response->body($view);
             
         }

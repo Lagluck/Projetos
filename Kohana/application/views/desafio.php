@@ -33,8 +33,25 @@
                         </div> 
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-12"><h4 style="color:white"><label class="label-primary">Receita Bruta</label></h4></div>
+                                <div class="col-lg-12">
+                                    Valores: <br>
+                                    <?php If(!empty($lista)){foreach($lista as $unit){
+            echo '<br>Purchaser Name: '. $unit['purchaser_name'];
+            echo '<br>Item Description: '. $unit['item_description'];
+            echo '<br>Item Price: '. $unit['item_price'];
+            echo '<br>Purchase Count: '. $unit['purchase_count'];
+            echo '<br>Merchant Adress: '. $unit['description'];
+            echo '<br>Merchant Name: '. $unit['merchant_name'];
+            $Total = $unit['item_price']*$unit['purchase_count'];
+            echo '<br>VALOR TOTAL: ' . $Total . '<br><br>' ; 
+            }}else{echo 'Nada listado!';}
+             ?>
+                               </div>
+                </div>
             </div>   
-                           
+            <div class="col-lg-4"></div>                  
         </div>    
     </div>
 </body>
