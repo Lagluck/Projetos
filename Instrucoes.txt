@@ -1,0 +1,12 @@
+Este projeto foi feito em Kohana 3.3, caso não tenha o Kohana em seu ambiente efetue as instação conforme:
+
+kohanaframework.org
+
+- Extraia arquivos da ultima versão para a raiz e tenha certeza de ter o apache configurado para URL´s amigaveis (importante).
+- Os arquivos do projeto estarão conforme a estrutura inicial existente na instalação do Kohana, bastando apenas a substituição do que é pertinente.
+- Não foram feitas validações no projeto, portanto, a inserção contínua de arquivos não serão validados e consequentemente gerará grandes tabelas no Mysql.
+- Anexo, também existe o XML da estrutura que criei para o BD.
+
+Qualquer dúvida estou ao dispor.
+
+Agradeço a atenção!

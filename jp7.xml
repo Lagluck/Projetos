@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.14
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: 20-Maio-2015 às 04:00
+- Versão do servidor: 5.6.17
+- PHP Version: 5.5.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="jp7" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="adresses">
+                CREATE TABLE `adresses` (
+                  `description` varchar(120) NOT NULL,
+                  `adress_ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`adress_ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="item">
+                CREATE TABLE `item` (
+                  `item_ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `item_description` varchar(30) NOT NULL,
+                  `item_price` float NOT NULL,
+                  PRIMARY KEY (`item_ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="merchant">
+                CREATE TABLE `merchant` (
+                  `merchant_name` varchar(30) NOT NULL,
+                  `merchant_ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `adress_ID` int(11) NOT NULL,
+                  PRIMARY KEY (`merchant_ID`),
+                  UNIQUE KEY `adress_ID` (`adress_ID`),
+                  CONSTRAINT `fk_adress_id` FOREIGN KEY (`adress_ID`) REFERENCES `adresses` (`adress_ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="purchase">
+                CREATE TABLE `purchase` (
+                  `purchase_ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `purchase_count` int(11) NOT NULL,
+                  `item_ID` int(11) NOT NULL,
+                  `merchant_ID` int(11) NOT NULL,
+                  `purchaser_ID` int(11) NOT NULL,
+                  PRIMARY KEY (`purchase_ID`),
+                  UNIQUE KEY `item_ID` (`item_ID`,`merchant_ID`,`purchaser_ID`),
+                  KEY `fk_id_purchaser` (`purchaser_ID`),
+                  KEY `fk_id_merchant` (`merchant_ID`),
+                  CONSTRAINT `fk_id_item` FOREIGN KEY (`item_ID`) REFERENCES `item` (`item_ID`),
+                  CONSTRAINT `fk_id_merchant` FOREIGN KEY (`merchant_ID`) REFERENCES `merchant` (`merchant_ID`),
+                  CONSTRAINT `fk_id_purchaser` FOREIGN KEY (`purchaser_ID`) REFERENCES `purchaser` (`purchaser_ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="purchaser">
+                CREATE TABLE `purchaser` (
+                  `purchaser_name` varchar(30) NOT NULL,
+                  `purchaser_ID` int(11) NOT NULL AUTO_INCREMENT,
+                  PRIMARY KEY (`purchaser_ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'jp7'
+    -->
+    <database name="jp7">
+        <!-- Tabela adresses -->
+        <table name="adresses">
+            <column name="description">987 Fake St</column>
+            <column name="adress_ID">57</column>
+        </table>
+        <!-- Tabela item -->
+        <table name="item">
+            <column name="item_ID">58</column>
+            <column name="item_description">R$10 off R$20 of food</column>
+            <column name="item_price">10</column>
+        </table>
+        <!-- Tabela merchant -->
+        <table name="merchant">
+            <column name="merchant_name">Bob's Pizza</column>
+            <column name="merchant_ID">52</column>
+            <column name="adress_ID">57</column>
+        </table>
+        <!-- Tabela purchase -->
+        <table name="purchase">
+            <column name="purchase_ID">37</column>
+            <column name="purchase_count">2</column>
+            <column name="item_ID">58</column>
+            <column name="merchant_ID">52</column>
+            <column name="purchaser_ID">49</column>
+        </table>
+        <!-- Tabela purchaser -->
+        <table name="purchaser">
+            <column name="purchaser_name">João Silva</column>
+            <column name="purchaser_ID">49</column>
+        </table>
+        <table name="purchaser">
+            <column name="purchaser_name">Amy Pond</column>
+            <column name="purchaser_ID">50</column>
+        </table>
+    </database>
+</pma_xml_export>
